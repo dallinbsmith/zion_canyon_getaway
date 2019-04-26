@@ -2,7 +2,7 @@ import React from 'react'
 
 const Clouds = () => (
 
-<svg className = "clouds" viewBox="0 0 1440 496" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+<svg className = "clouds" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <defs>
         <polygon id="path-1" points="1413.48458 0.359788383 1413.48458 306.676888 0.131949288 306.676888 0.131949288 0.359788383 1413.48458 0.359788383"></polygon>
         <polygon id="path-3" points="2.21313752e-20 0.0213741631 2.21313752e-20 510 1724.50492 510 1724.50492 0.0213741631"></polygon>
