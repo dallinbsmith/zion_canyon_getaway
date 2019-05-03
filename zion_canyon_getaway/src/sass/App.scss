@@ -77,8 +77,6 @@ a {
     position: relative;
     background-color: #f2eedd;
     background-image: linear-gradient(to bottom, #fbb547 0%, #fbb547 10%, #D55214 100%);
-    height: 9000px;
-    min-height: 120vh;
     display: flex;
     justify-content: center;
 }
@@ -265,8 +263,19 @@ a {
 ==================================== */
 
 .content-container{
-	height: 8000px;
+	min-height: 3000px;
 	background-color: #1A1111;
+}
+
+/* ================================= 
+	Home Booking Container
+==================================== */
+.home-booking-container{
+	position: absolute;
+	width: 80%;
+	height: 10000px;
+	background-color: #F2E9D6;
+	z-index: 20;
 }
 
 

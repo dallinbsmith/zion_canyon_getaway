@@ -8,12 +8,12 @@ import Mtns3 from '../media/svg/Mtns3';
 import Marsh from '../media/svg/Marsh';
 import Rocks from '../media/svg/Rocks';
 import Clouds from '../media/svg/Clouds';
-
+import HomeBooking from './HomeBooking';
 
 const ParallaxBackground = () => (
     <div>
         <Parallax y={[-330 + 'px', 270 + 'px']}>
-                <Clouds />
+            <Clouds />
         </Parallax>
         <Parallax y={[-250 + 'px', 360 + 'px']}>
             <Sun />
@@ -54,13 +54,10 @@ const ParallaxBackground = () => (
             <Rocks />
         </Parallax>
         <Parallax y={[465 + 'px', 485 + 'px']}>
-            <img className = "people" src={require('../media/svg/People.png')} />
+            <img className="people" src={require('../media/svg/People.png')} />
         </Parallax>
         <Parallax y={[865 + 'px', 885 + 'px']}>
-            <div className = "gradient-square"></div>
-        </Parallax>
-        <Parallax y={[1065 + 'px', 1085 + 'px']}>
-            <div className = "content-container"></div>
+            <div className="gradient-square" />
         </Parallax>
     </div>
 );
@@ -70,6 +67,11 @@ const Home = () => (
         <ParallaxProvider>
             <main className="banner-container">
                 <ParallaxBackground />
+                <Parallax y={[1065 + 'px', 1085 + 'px']}>
+                    <div className="content-container">
+                        <HomeBooking />
+                    </div>
+                </Parallax>
             </main>
         </ParallaxProvider>
     </div>
