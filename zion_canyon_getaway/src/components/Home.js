@@ -53,10 +53,10 @@ const ParallaxBackground = () => (
         <Parallax y={[485 + 'px', 625 + 'px']}>
             <Rocks />
         </Parallax>
-        <Parallax y={[465 + 'px', 485 + 'px']}>
+        <Parallax y={[515 + 'px', 535 + 'px']}>
             <img className="people" src={require('../media/svg/People.png')} />
         </Parallax>
-        <Parallax y={[865 + 'px', 885 + 'px']}>
+        <Parallax y={[905 + 'px', 925 + 'px']}>
             <div className="gradient-square" />
         </Parallax>
     </div>

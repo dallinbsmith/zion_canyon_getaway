@@ -5,21 +5,21 @@ const Navbar = props => {
   return (
     <div className = "navbar">
       <nav>
-        <header class="header">
-          <h1 class="logo">
+        <header className="header">
+          <h1 className="logo">
             <a className = "corner-logo" href="/">
               <CornerLogo/>
             </a>
           </h1>
-          <ul class="main-nav">
+          <ul className="main-nav">
             <li>
               <a href="/booking">Booking</a>
             </li>
-            <div class="vl"></div>
+            <div className="vl"></div>
             <li>
               <a href="/accomodations">Accomodations</a>
             </li>
-            <div class="vl"></div>
+            <div className="vl"></div>
             <li>
               <a href="/contact">Contact</a>
             </li>
