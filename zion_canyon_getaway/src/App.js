@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Booking from "./components/Booking";
-import Contact from "./components/Contact";
-import Accomodations from "./components/Accomodations";
+import Home from "./components/Pages/Home/Home";
+import Booking from "./components/Pages/Booking";
+import Contact from "./components/Pages/Contact";
+import Accomodations from "./components/Pages/Accomodations";
 import Navbar from "./components/Navbar";
 import { Layout } from "antd";
 

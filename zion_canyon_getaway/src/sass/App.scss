@@ -275,6 +275,15 @@ a {
 	height: 400px;
 }
 
+.slick-slider{
+    width: 85%;
+    top: -350px;
+}
+
+.slick-next, .slick-prev{
+    opacity: .0;
+}
+
 .booking-card{
 	max-width: 345;
 	background-color: #FFF1D5;
@@ -369,4 +378,12 @@ a {
         justify-content: space-between;
         background-color: #fbb547;
     }
+}
+
+.visible{
+    display: block;
+}
+
+.non-visible{
+    display: none;
 }

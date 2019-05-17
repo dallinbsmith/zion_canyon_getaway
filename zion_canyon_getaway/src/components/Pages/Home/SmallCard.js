@@ -6,14 +6,18 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import StarRate from '@material-ui/icons/StarRate';
 import { makeStyles } from '@material-ui/styles';
 
 
 const useStyles = makeStyles({
     card: {
-        maxWidth: 345,
+        maxWidth: '205px',
+        height: '220px',
+        cursor: 'pointer',
         backgroundColor: '#FFF1D5',
+        position: 'relative',
+        top: '230px',
+        marginLeft: '50px',
     },
     cardText: {
         position: 'relative',
@@ -24,7 +28,7 @@ const useStyles = makeStyles({
         margin: '1px',
     },
     cardPrice: {
-        fontSize: '22px',
+        fontSize: '15px',
     },
     cardLink: {
         textDecoration: 'underline',
@@ -33,7 +37,7 @@ const useStyles = makeStyles({
         paddingLeft: '12px',
         margin: '0px',
         marginTop: '3px',
-    },
+    }, 
     media: {
         // ⚠️ object-fit is not supported by IE 11.
         objectFit: 'cover',
@@ -51,26 +55,21 @@ const useStyles = makeStyles({
         padding: '1px',
         margin: '1px',
     },
-    starContainer: {
-        paddingRight: '15px',
-    },
-    starRate: {
-        color: '#E1702B',
-    },
 });
 
-export default function BookCard(props) {
+
+export default function SmallCard(props) {
     const classes = useStyles();
     return (
         <div>
-            <Card className="booking-card">
+            <Card className={classes.card}>
                 <div>
                     <CardMedia
                         component="img"
                         alt="Zion Vacation Rental"
                         className="card-media"
-                        height="340"
-                        image= {require(`../media/png/${props.photo}.png`)}
+                        height="160"
+                        image= {require(`../../../media/png/${props.photo}.jpg`)}
                         title="Zion Vacation Rental"
                     />
                     <CardContent className="grid-container">
@@ -80,38 +79,23 @@ export default function BookCard(props) {
                             spacing={16}
                             alignItems="center"
                         >
-                            <Grid align="center" item md>
-                                <h1 className="card-price">
+                            <Grid container direction="row" alignItems="center">
+                            <Grid align="center" item md>                                
+                                <h4 className={classes.cardPrice}>
                                     {props.price}
-                                </h1>
+                                </h4>
                             </Grid>
                             <Grid item md>
                                 <Button
                                     align="center"
                                     variant="contained"
-                                    size="large"
+                                    size="small"
                                     className={classes.button}
                                 >
                                     Book
                                 </Button>
                             </Grid>
                         </Grid>
-                        <Grid container direction="row" align="left">
-                            <h6 className="card-text">
-                                {props.description}
-                            </h6>
-                        </Grid>
-                        <Grid container direction="row" alignItems="center">
-                            <Grid align="left" item md>
-                                <h6 className="card-link">More Info</h6>
-                            </Grid>
-                            <Grid className="star-container" item md>
-                                <StarRate className="star-rate" />
-                                <StarRate className="star-rate" />
-                                <StarRate className="star-rate" />
-                                <StarRate className="star-rate" />
-                                <StarRate className="star-rate" />
-                            </Grid>
                         </Grid>
                     </CardContent>
                 </div>
