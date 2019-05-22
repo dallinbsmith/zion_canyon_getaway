@@ -53,13 +53,14 @@ const styles = (theme) => ({
     },
     bookingCardContainer: {
         position: 'relative',
-        top: '-180px',
+        top: '-20px',
     },
     title: {
         color: '#E1702B',
     },
-    cardDetails: {
-        flex: 1,
+    bookingForm:{
+        position: 'relative',
+        top: '140px',
     },
     cardMedia: {
         width: 160,
@@ -90,6 +91,15 @@ function HomeBooking(props) {
                 <main>
                     {/* Main featured post */}
                     <Paper className={classes.mainFeaturedPost}>
+                    <Grid container direction="row">
+                            <Grid align="center" item md={12}>
+                                <Grid container className={classes.bookingForm}>
+                                    <Grid item md={12}>
+                                                    <BookingForm/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
                         <Grid container direction="column" spacing={0}>
                             <Grid container direction="row" item>
                                 <Grid item md={5}/>
@@ -124,23 +134,7 @@ function HomeBooking(props) {
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid container direction="row">
-                            <Grid align="center" item md={12}>
-                                <Grid container className={classes.cardGrid}>
-                                    <Grid item md={12}>
-                                        <Card className={classes.card}>
-                                            <div
-                                                className={classes.cardDetails}
-                                            >
-                                                <CardContent>
-                                                    <BookingForm/>
-                                                </CardContent>
-                                            </div>
-                                        </Card>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
+                    
                     </Paper>
                     {/* End main featured post */}
                     {/* Sub featured posts */}

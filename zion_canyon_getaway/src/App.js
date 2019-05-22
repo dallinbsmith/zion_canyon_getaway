@@ -3,12 +3,15 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/Pages/Home/Home";
 import Booking from "./components/Pages/Booking";
 import Contact from "./components/Pages/Contact";
-import Accomodations from "./components/Pages/Accomodations";
+import Accomodations from "./components/Pages/Accomodations/Accomodations";
 import Navbar from "./components/Navbar";
 import { Layout } from "antd";
 
 import './sass/root.scss';
 import "./sass/App.scss";
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+
 
 const { Header, Footer } = Layout;
 

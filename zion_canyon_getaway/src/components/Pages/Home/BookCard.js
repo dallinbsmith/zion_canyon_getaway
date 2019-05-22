@@ -9,7 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import StarRate from '@material-ui/icons/StarRate';
 import { makeStyles } from '@material-ui/styles';
 
-
 const useStyles = makeStyles({
     card: {
         maxWidth: 345,
@@ -63,14 +62,14 @@ export default function BookCard(props) {
     const classes = useStyles();
     return (
         <div>
-            <Card className="booking-card">
+            <Card className={classes.card}>
                 <div>
                     <CardMedia
                         component="img"
                         alt="Zion Vacation Rental"
                         className="card-media"
                         height="310"
-                        image= {require(`../../../media/png/${props.photo}.jpg`)}
+                        image={require(`../../../media/jpg/${props.photo}.jpg`)}
                         title="Zion Vacation Rental"
                     />
                     <CardContent className="grid-container">
@@ -81,9 +80,7 @@ export default function BookCard(props) {
                             alignItems="center"
                         >
                             <Grid align="center" item md>
-                                <h1 className="card-price">
-                                    {props.price}
-                                </h1>
+                                <h1 className="card-price">{props.price}</h1>
                             </Grid>
                             <Grid item md>
                                 <Button
@@ -97,9 +94,7 @@ export default function BookCard(props) {
                             </Grid>
                         </Grid>
                         <Grid container direction="row" align="left">
-                            <h6 className="card-text">
-                                {props.description}
-                            </h6>
+                            <h6 className="card-text">{props.description}</h6>
                         </Grid>
                         <Grid container direction="row" alignItems="center">
                             <Grid align="left" item md>

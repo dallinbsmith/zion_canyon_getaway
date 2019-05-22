@@ -8,10 +8,9 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/styles';
 
-
 const useStyles = makeStyles({
     card: {
-        maxWidth: '205px',
+        maxWidth: '235px',
         height: '220px',
         cursor: 'pointer',
         backgroundColor: '#FFF1D5',
@@ -37,7 +36,7 @@ const useStyles = makeStyles({
         paddingLeft: '12px',
         margin: '0px',
         marginTop: '3px',
-    }, 
+    },
     media: {
         // ⚠️ object-fit is not supported by IE 11.
         objectFit: 'cover',
@@ -57,7 +56,6 @@ const useStyles = makeStyles({
     },
 });
 
-
 export default function SmallCard(props) {
     const classes = useStyles();
     return (
@@ -69,7 +67,7 @@ export default function SmallCard(props) {
                         alt="Zion Vacation Rental"
                         className="card-media"
                         height="160"
-                        image= {require(`../../../media/png/${props.photo}.jpg`)}
+                        image={require(`../../../media/jpg/${props.photo}.jpg`)}
                         title="Zion Vacation Rental"
                     />
                     <CardContent className="grid-container">
@@ -80,22 +78,22 @@ export default function SmallCard(props) {
                             alignItems="center"
                         >
                             <Grid container direction="row" alignItems="center">
-                            <Grid align="center" item md>                                
-                                <h4 className={classes.cardPrice}>
-                                    {props.price}
-                                </h4>
+                                <Grid align="center" item md>
+                                    <h4 className={classes.cardPrice}>
+                                        {props.price}
+                                    </h4>
+                                </Grid>
+                                <Grid item md>
+                                    <Button
+                                        align="center"
+                                        variant="contained"
+                                        size="small"
+                                        className={classes.button}
+                                    >
+                                        Book
+                                    </Button>
+                                </Grid>
                             </Grid>
-                            <Grid item md>
-                                <Button
-                                    align="center"
-                                    variant="contained"
-                                    size="small"
-                                    className={classes.button}
-                                >
-                                    Book
-                                </Button>
-                            </Grid>
-                        </Grid>
                         </Grid>
                     </CardContent>
                 </div>
